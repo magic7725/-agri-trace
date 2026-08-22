@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录 - 农品鉴真溯源系统</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-body">
+  <div class="login-wrap">
+    <!-- 左侧品牌区 -->
+    <div class="login-brand">
+      <div class="brand-logo">🌾</div>
+      <h1>农品鉴真溯源系统</h1>
+      <p class="brand-slogan">一物一码 · 全程可溯 · 放心消费</p>
+      <ul class="brand-points">
+        <li>✅ 权威溯源，从田间到餐桌全程透明</li>
+        <li>✅ 扫码即查，真伪立辨</li>
+        <li>✅ 数据可视化，品质有据可循</li>
+      </ul>
+    </div>
+
+    <!-- 右侧登录/注册表单 -->
+    <div class="login-card">
+      <div class="login-tabs">
+        <button class="tab-btn active" data-tab="login">登 录</button>
+        <button class="tab-btn" data-tab="register">注 册</button>
+      </div>
+
+      <!-- 登录表单 -->
+      <form id="loginForm" class="auth-form">
+        <h2 class="form-title">欢迎回来 👋</h2>
+        <label class="field">
+          <span>用户名</span>
+          <input type="text" id="loginUser" placeholder="请输入用户名" autocomplete="username" />
+        </label>
+        <label class="field">
+          <span>密码</span>
+          <input type="password" id="loginPass" placeholder="请输入密码" autocomplete="current-password" />
+        </label>
+        <button type="submit" class="btn btn-primary btn-block">登 录</button>
+        <p class="form-tip">演示账号：admin / 123456　或　user / 123456</p>
+      </form>
+
+      <!-- 注册表单 -->
+      <form id="registerForm" class="auth-form hidden">
+        <h2 class="form-title">创建账号 ✍️</h2>
+        <label class="field">
+          <span>用户名</span>
+          <input type="text" id="regUser" placeholder="3-16 位字符" autocomplete="username" />
+        </label>
+        <label class="field">
+          <span>昵称</span>
+          <input type="text" id="regNick" placeholder="显示昵称" />
+        </label>
+        <label class="field">
+          <span>密码</span>
+          <input type="password" id="regPass" placeholder="至少 6 位" autocomplete="new-password" />
+        </label>
+        <label class="field">
+          <span>确认密码</span>
+          <input type="password" id="regPass2" placeholder="再次输入密码" autocomplete="new-password" />
+        </label>
+        <button type="submit" class="btn btn-primary btn-block">注 册</button>
+      </form>
+
+      <p id="loginMsg" class="form-msg"></p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
